@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //final TextView dailyRent = findViewById(R.id.dailyRentTextView);
     int tableNumber = 0;
     RadioGroup rdg;
+    int age;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +87,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         int price = map.get(map.keySet().toArray()[position]);
        // final TextView dailyR = findViewById(R.id.dailyRentTextView);
        // dailyRent.setText(String.valueOf(price));
+        int i = rdg.getCheckedRadioButtonId();
+        RadioButton r = (RadioButton) findViewById(i);
+        String rvalue = r.getText().toString();
+        System.out.println("This is Radio Output: "+ rvalue);
+
+        switch (rvalue){
+            case "Less Than 20":
+                price = price+5;
+                break;
+            case "Above 60":
+                price = price-10;
+                break;
+        }
+
+        System.out.println("PRice is this: "+ price);
 
 
 

@@ -71,6 +71,7 @@
                 android:id="@+id/radioButtonLT20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Less Than 20" />
 
             <RadioButton
